@@ -13,7 +13,7 @@ object Articles extends Controller with Security {
     Ok(Json.toJson(Article.findById(id)))
   }
 
-  def getArticles(startPage: Int, pageSize: Int) = Action {
-    Ok(Json.toJson(Article.getArticles(0, 10, None)))
+  def getArticles(startPage: Int, pageSize: Int, orderBy: Option[String]) = Action {
+    Ok(Json.toJson(Article.getArticles(0, 10, orderBy)))
   }
 }
