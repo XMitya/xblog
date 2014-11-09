@@ -25,7 +25,7 @@ GET     /authuser               controllers.Users.authUser()
 # Articles
 GET     /articles/:id           controllers.Articles.getArticle(id: Long)
 GET     /articles               controllers.Articles.getArticles(startPage: Int ?= 0, pageSize: Int ?= 10)
-s
+
 # Static
 # ~~~~
 
