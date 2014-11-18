@@ -23,12 +23,14 @@
     },
     paths: {
       'requirejs': ['../lib/requirejs/require'],
+      'text': ['../lib/requirejs-text/text'],
       'jquery': ['../lib/jquery/jquery'],
       'angular': ['../lib/angularjs/angular'],
       'angular-route': ['../lib/angularjs/angular-route'],
       'angular-cookies': ['../lib/angularjs/angular-cookies'],
       'bootstrap': ['../lib/bootstrap/js/bootstrap'],
-      'jsRoutes': ['/jsroutes']
+      'jsRoutes': ['/jsroutes'],
+      'json': ['../json/']
     }
   });
 
