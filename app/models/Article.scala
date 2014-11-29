@@ -49,19 +49,7 @@ object Article {
       article.views
     ))
 
-  def findById(id: Long): Article = {
-    new Article(
-      Some(1),
-      "Test article",
-      "Test content",
-      User.findOneById(3).getOrElse(new User(None,"2","3","4",None)),
-      Set("test"),
-      DateTime.now(),
-      26
-    )
-  }
+  def findById(id: Long): Article = Mocks.articleMocks.head
 
-  def getArticles(pageStart: Int, pageSize: Int, orderBy: Option[String]): Seq[Article] = {
-    List(findById(1))
-  }
+  def getArticles(pageStart: Int, pageSize: Int, orderBy: Option[String]): Seq[Article] = Mocks.articleMocks
 }

@@ -1,0 +1,22 @@
+<h1>Posts</h1>
+<div data-ng-repeat="post in articles">
+    <div class="container">
+        <div class="well">
+            <div class="media">
+                <h4 class="media-heading">
+                    {{post.title}}
+                </h4>
+
+                <div class="media-body">
+                    {{post.content}}
+                </div>
+                <cite class="text-muted">
+                    <p class="text-right">
+                        <span class="text-right"><i>Views:</i> {{post.views}}</span>
+                        <span class="text-right"><i>Author:</i> {{post.author.name}}</span>
+                    </p>
+                </cite>
+            </div>
+        </div>
+    </div>
+</div>
