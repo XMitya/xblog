@@ -49,7 +49,7 @@ object Article {
       article.views
     ))
 
-  def findById(id: Long): Article = Mocks.articleMocks.head
+  def findById(id: Long): Article = Mocks.articleMocks(id.asInstanceOf[Int])
 
   def getArticles(pageStart: Int, pageSize: Int, orderBy: Option[String]): Seq[Article] = Mocks.articleMocks
 }

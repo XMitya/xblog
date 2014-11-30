@@ -7,7 +7,8 @@ define(['angular','./controllers','common'], function(angular, controllers){
     var module = angular.module('article.routes',['article.services','xblog.common']);
     module.config(['$routeProvider', function($routeProvider){
         $routeProvider
-            .when('/articles', {templateUrl:'/assets/javascripts/article/article.html', controller:controllers.ArticleCtrl});
+            .when('/articles', {templateUrl:'/assets/javascripts/article/articles.html', controller:controllers.ArticleCtrl})
+            .when('/articles/:id', {templateUrl:'/assets/javascripts/article/article.html', controller:controllers.PostCtrl});
 
     }]);
     return module;

@@ -4,16 +4,26 @@
 define([], function(){
     'use strict';
 
-    var ArticleCtrl = function($scope, articleService) {
+    var ArticlesCtrl = function($scope, articleService) {
         $scope.articles = [];
         articleService.getArticles(function(data){
             $scope.articles = data;
         });
     };
 
-    ArticleCtrl.$inject = ['$scope', 'articleService'];
+    ArticlesCtrl.$inject = ['$scope', 'articleService'];
+
+    var PostCtrl = function($scope, articleService, $routeParams) {
+        $scope.post = {};
+        articleService.getPost($routeParams.id, function(post){
+            $scope.post = post;
+        });
+    };
+
+    PostCtrl.$inject = ['$scope', 'articleService', '$routeParams'];
 
     return {
-        ArticleCtrl: ArticleCtrl
+        ArticleCtrl: ArticlesCtrl,
+        PostCtrl:PostCtrl
     };
 });

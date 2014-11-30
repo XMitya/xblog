@@ -15,6 +15,15 @@ define(['angular'], function(angular){
                         callback(response.data);
                         return response.data;
                     });
+            },
+
+            getPost: function(postId, callback) {
+                $log.debug('Loading post');
+                return playRoutes.controllers.Articles.getArticle(postId)
+                    .get().then(function(response) {
+                    callback(response.data);
+                    return response.data;
+                });
             }
 
         };
